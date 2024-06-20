@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            :root {
+                --primary-color: #5a2f90; /* Dark purple */
+                --secondary-color: #f0f0f5; /* Light grey */
+                --text-color: #333333; /* Dark grey */
+                --highlight-color: #ffcc00; /* Yellow */
+                --hover-bg-color: #3e1d61; /* Darker purple */
+                --hover-text-color: #ffffff; /* White */
+                --footer-bg-color: #4b226c; /* Slightly different purple for footer */
+                --footer-text-color: #ffffff; /* White */
+            }
+
+            body {
+                font-family: sans-serif;
+                background-color: var(--secondary-color);
+                color: var(--text-color);
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                 background-image: url("img/front.jpg");
+                
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                border: 2px solid black;
+                border-style: outset;
+                border-radius: 20px;
+                height: inherit;
+                width: 30%;
+                padding: 10px;
+                margin: 10px auto;
+                                background-color: rgba(255, 255, 255, 0.9); /* darkcyan with 50% opacity */
+
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            }
+            .heading {
+                font-size: 25px;
+
+                font-weight: 600;
+                margin-top: 1rem;
+                text-align: center;
+                letter-spacing: 1px;
+
+              
+
+            }
+            .box {
+                margin-top: 2rem;
+            }
+            .inputbox {
+                border-bottom: 2px solid #000000;
+                margin: 10px 75px 25px 40px;
+            }
+            .inputbox label {
+                font-size: 20px;
+                font-weight: 500;
+                display:block;
+                text-align: left;
+                letter-spacing: 1.5px;
+
+            }
+            .inputbox input{
+                font-size: 20px;
+                outline: none;
+                border: none;
+                background: transparent;
+                margin-top: 10px;
+                width: 100%;
+                letter-spacing: 1.5px;
+                font-weight: 600;
+            }
+            .btn {
+                color: black;
+                background: transparent;
+                border: 2px solid black;
+                width: 30%;
+                height: 35px;
+                border-radius: 30px;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                margin-top: 15px;
+
+            }
+            .btn:hover {
+                background-color: black;
+                letter-spacing: 4px;
+                color: #ffffff;
+            }
+            .btn:active {
+                transform: scale(0.8);
+            }
+           
+
+            /* Navbar styles */
+            .navbar {
+                background-color: darkcyan;
+                overflow: hidden;
+                display: flex;
+                align-items: center; /* Center vertically */
+                height: 70px;
+                padding: 0 20px;
+                                            background-color: rgba(0, 139, 139, 0.0); /* darkcyan with 50% opacity */
+
+            }
+
+            #navimg {
+                height: 50px;
+                width: 150px;
+            }
+
+            .navbar a {
+                color: var(--footer-text-color);
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .navitem a:hover {
+                background-color: var(--hover-bg-color);
+                color: var(--hover-text-color);
+                border-radius: 30px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .navitem {
+                margin-left: auto;
+                padding: 10px;
+                position: relative;
+                z-index: 2;
+                display: flex;
+                gap: 10px;
+            }
+
+            /* Footer styles */
+            footer {
+                background-color: darkcyan;
+                color: var(--footer-text-color);
+                                            background-color: rgba(0, 139, 139, 0.0); /* darkcyan with 50% opacity */
+
+                text-align: center;
+                padding: 10px;
+                position: absolute;
+                width: 100%;
+                bottom: -100px;
+            }
+
+            footer p {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="index.html"><img id="navimg" src="img/logo.png"></a>
+            <div class="navitem">
+                <a href="index.html">Home</a>
+                            <a href="userreg.html">User Registration</a>
+
+                <a href="login.html">User Login</a>
+                <a href="adminlogin.html">Admin Login</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box1">
+                <form action="userreg.jsp" >
+                    <div class="heading">User Register</div>
+                    <div class="inputbox">
+                        <label for=fname>First Name </label>
+                        <input type="text" name="fname" value="" id="fname" required/>
+                    </div>
+                    <div class="inputbox">
+                        <label for=lname>Last Name </label>
+                        <input type="text" name="lname" value="" id="lname" required/>
+                    </div>
+                    <div class="inputbox">
+                        <label for=email>Email Id </label>
+                        <input type="text" name="email" value="" id="email" required/>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="password">Password </label>
+                        <input type="password" name="password" value="" id="password" required/>
+                    </div>
+                    <div style="text-align:center; justify-content: center; display: flex;">
+                        
+                    <input class="btn" type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+           
+        </div>
+        <footer>
+            <p>© 2024 JK Innovative Amravati. All Rights Reserved.</p>
+        </footer>
+        <script>
+            function validateLogin() {
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+
+                if (username.trim() === '' || password.trim() === '') {
+                    alert("Please fill in all fields for login.");
+                    return false;
+                }
+                return true;
+            }
+
+            function validatePasswordChange() {
+                var email = document.getElementById("email1").value;
+                var currentPassword = document.getElementById("currentPassword").value;
+                var newPassword = document.getElementById("newPassword").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+
+                if (username.trim() === '' || currentPassword.trim() === '' || newPassword.trim() === '' || confirmPassword.trim() === '') {
+                    alert("Please fill in all fields for password change.");
+                    return false;
+                }
+
+                if (newPassword !== confirmPassword) {
+                    alert("New password and confirm password do not match.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

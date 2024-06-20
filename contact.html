@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-color: #5a2f90; /* Dark purple */
+            --secondary-color: #f0f0f5; /* Light grey */
+            --text-color: #333333; /* Dark grey */
+            --highlight-color: #ffcc00; /* Yellow */
+            --hover-bg-color: #3e1d61; /* Darker purple */
+            --hover-text-color: #ffffff; /* White */
+            --footer-bg-color: #4b226c; /* Slightly different purple for footer */
+            --footer-text-color: #ffffff; /* White */
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          background-image: url("img/front.jpg");
+                background-size: cover;
+                background-attachment: fixed;
+        }
+
+        .container {
+            margin: 40px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: darkcyan;
+            overflow: hidden;
+            display: flex;
+            align-items: center; /* Center vertically */
+            height: 70px;
+                            background-color: rgba(0, 139, 139, 0.0); /* darkcyan with 50% opacity */
+
+            padding: 0 20px;
+        }
+
+        #navimg {
+            height: 50px;
+            width: 150px;
+        }
+
+        .navbar a {
+            color: var(--footer-text-color);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navitem a:hover {
+            background-color: var(--hover-bg-color);
+            color: var(--hover-text-color);
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navitem {
+            margin-left: auto;
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: darkcyan;
+            color: var(--footer-text-color);
+            text-align: center;
+                            background-color: rgba(0, 139, 139, 0.0); /* darkcyan with 50% opacity */
+
+            padding: 10px;
+        }
+
+        /* Content styles */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 20px; /* Adjust top margin to accommodate navbar */
+            margin-bottom: 30px;
+        }
+
+        .info {
+            width: 600px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+
+            margin-bottom: 20px;
+            margin-right: 60px;
+        }
+
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .info h1,
+        .form-container h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .address {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .icon-img {
+            height: 50px;
+            width: 50px;
+        }
+
+        h4 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--highlight-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--hover-bg-color);
+            color: var(--hover-text-color);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form styles */
+        .form-container {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            width: 50%;
+            margin: 0 auto;
+            display: block;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><img id="navimg" src="img/logo.png" alt="Logo"></a>
+        <div class="navitem">
+            <a href="index.html">Home</a>
+            <a href="userreg.html">User Registration</a>
+            <a href="login.html">User Login</a>
+            <a href="adminlogin.html">Admin Login</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="info">
+            <h1>Contact Us</h1>
+            <div class="address">
+                <div class="icon"><img class="icon-img" src="img/icon1.png" alt="Address Icon"></div>
+                <div>
+                    <h4>Address</h4>
+                    <p>Gulshan Plaza , Badnera Road Rajapeth Amravati (MH India) - 444605</p>
+                </div>
+            </div>
+            <div class="address">
+                <div class="icon"><img class="icon-img" src="img/icon2.png" alt="Email Icon"></div>
+                <div>
+                    <h4>Email</h4>
+                    <p>support@jkinnovative.online</p>
+                </div>
+            </div>
+            <div class="address">
+                <div class="icon"><img class="icon-img" src="img/icon3.png" alt="Phone Icon"></div>
+                <div>
+                    <h4>Phones</h4>
+                    <p>Phone No: +91-9021532927</p>
+                    <p>Alternate No: +91-9021245401</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h1>Interested in discussing?</h1>
+            <form action="email_contactus.jsp" method="POST" onsubmit="return validation()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobno">Mobile No</label>
+                    <input type="text" id="mobno" name="mobno" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="query">Query</label>
+                    <input type="text" id="query" name="query" required>
+
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 JK Innovative Amravati. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function validation() {
+            // Retrieve form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var mobno = document.getElementById("mobno").value;
+            var city = document.getElementById("city").value           
+            var query = document.getElementById("query").value;
+
+            // Check if fields are empty
+            if (name.trim() === '' || email.trim() === '' || mobno.trim() === '' || city.trim() === '' || query.trim() === '') {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            // Check mobile number format
+            if (isNaN(mobno)) {
+                alert("Mobile Number should be numeric.");
+                return false;
+            } else if (mobno.length !== 10) {
+                alert("Mobile Number should be 10 digits.");
+                return false;
+            }
+
+            // If all validations pass, return true
+            return true;
+        }
+    </script>
+</body>
+</html>
+
